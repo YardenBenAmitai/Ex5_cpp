@@ -24,9 +24,8 @@ namespace itertools{
 			
 			const_iterator(const typename T1::const_iterator& begin1, const typename T1::const_iterator& end1, const typename T2::const_iterator& begin2, const typename T2::const_iterator& end2):
 				current1(begin1), stop1(end1), current2(begin2), start2(begin2), stop2(end2) {
-				if(stop2==start2 || current1==stop1){
+				if(start2==stop2){
 					current1=stop1;
-					current2=stop2;
 				}
 			}
 			
